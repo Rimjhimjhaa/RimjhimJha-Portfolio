@@ -39,31 +39,30 @@ export default function HomePage() {
     }
   }, [theme]);
 
-  
   // Scroll reveal
-useEffect(() => {
-  if (typeof window === "undefined") return;
+  useEffect(() => {
+    if (typeof window === "undefined") return;
 
-  const revealElements = document.querySelectorAll(".reveal");
+    const revealElements = document.querySelectorAll(".reveal");
 
-  if (!revealElements || revealElements.length === 0) return;
+    if (!revealElements || revealElements.length === 0) return;
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("reveal-visible");
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.15 }
-  );
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("reveal-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
 
-  revealElements.forEach((el) => observer.observe(el));
+    revealElements.forEach((el) => observer.observe(el));
 
-  return () => observer.disconnect();
-}, []);
+    return () => observer.disconnect();
+  }, []);
 
   // Toggle lamp switch
   const handleTogglePower = () => {
@@ -118,24 +117,25 @@ useEffect(() => {
         <div className="landing-inner reveal reveal-visible">
           <div className="space-y-4">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold leading-tight">
-              <span className="text-gradient-main">Rimjhim Jha</span>
+              <span className="text-gradient-main">Ashish Kumar Jha</span>
               <br />
               <span>Hello !!</span>
             </h1>
             <p className="text-sm md:text-base text-slate-400 max-w-md">
               Turn the switch ON to light up the lamp and unlock an interactive
-              developer portfolio – projects in Web, Machine Learning, and Cloud,
-              all in one place.
+              portfolio – showcasing 8+ years of expertise in Business Process
+              Management, Data Analytics, and Digital Transformation across Energy
+              &amp; Utilities industries.
             </p>
             <div className="flex flex-wrap gap-2 mb-2">
               <span className="px-3 py-1 rounded-full border border-slate-500/60 text-[0.7rem] uppercase tracking-[0.12em] text-slate-300 bg-white/5">
-                B.Tech CSE • 2022–2026
+                Techno-Functional Consultant
               </span>
               <span className="px-3 py-1 rounded-full border border-slate-500/60 text-[0.7rem] uppercase tracking-[0.12em] text-slate-300 bg-white/5">
-                Python &amp; JavaScript
+                8+ Years Experience
               </span>
               <span className="px-3 py-1 rounded-full border border-slate-500/60 text-[0.7rem] uppercase tracking-[0.12em] text-slate-300 bg-white/5">
-                Web • ML • Cloud
+                Data • BPM • Energy Systems
               </span>
             </div>
             <div className="flex items-center gap-2 text-xs text-slate-400">
@@ -194,15 +194,15 @@ useEffect(() => {
             >
               <div className="w-9 h-9 rounded-full border-2 border-slate-100/20 bg-gradient-to-br from-orange-500 via-emerald-400 to-sky-400 flex items-center justify-center shadow-[0_0_14px_rgba(56,189,248,0.6)]">
                 <span className="font-bold text-xs bg-slate-50 text-slate-900 rounded-full px-1.5 py-0.5">
-                  RJ
+                  AJ
                 </span>
               </div>
               <div className="flex flex-col items-start">
                 <span className="text-sm font-semibold tracking-[0.12em] uppercase">
-                  Rimjhim&nbsp;Jha
+                  Ashish&nbsp;Kumar&nbsp;Jha
                 </span>
                 <span className="text-[0.7rem] text-slate-400">
-                  Developer • CSE @ SRMCEM
+                  Techno-Functional Consultant • Data &amp; BPM
                 </span>
               </div>
             </button>
@@ -235,7 +235,7 @@ useEffect(() => {
               <ul className="flex items-center gap-4 text-[0.65rem] tracking-[0.14em] uppercase">
                 {[
                   ["Home", "#hero"],
-                  ["Skills", "#skills"],
+                  ["Expertise", "#skills"],
                   ["Projects", "#projects"],
                   ["Experience", "#experience"],
                   ["Certifications", "#certifications"],
@@ -273,7 +273,7 @@ useEffect(() => {
             >
               {[
                 ["Home", "#hero"],
-                ["Skills", "#skills"],
+                ["Expertise", "#skills"],
                 ["Projects", "#projects"],
                 ["Experience", "#experience"],
                 ["Certifications", "#certifications"],
@@ -314,30 +314,32 @@ useEffect(() => {
             <div className="grid md:grid-cols-[1.1fr_minmax(0,1fr)] gap-8 items-center">
               <div className="hero-intro reveal space-y-4">
                 <div className="uppercase tracking-[0.22em] text-[0.7rem] text-slate-400">
-                  CSE Student • Developer
+                  Techno-Functional Consultant • Data, BPM &amp; Energy Systems
                 </div>
                 <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold leading-tight">
-                  Building{" "}
-                  <span className="text-gradient-main">smart, data-driven</span>{" "}
-                  experiences from idea to deployment.
+                  Delivering{" "}
+                  <span className="text-gradient-main">data-driven transformation</span>{" "}
+                  across Energy &amp; Utilities.
                 </h1>
                 <p className="text-sm md:text-base text-slate-400 max-w-xl">
-                  I’m a B.Tech CSE student at Shri Ramswaroop Memorial College of
-                  Engineering &amp; Management (2022–2026), working across Web,
-                  Machine Learning, Excel automation, and Cloud to create real,
-                  usable solutions.
+                  Consulting professional and Energy &amp; Utilities industry specialist
+                  with 8+ years of experience across the complete Business Process
+                  Management (BPM) lifecycle, digital transformation, and data-driven
+                  consulting. Proven track record in delivering large-scale process
+                  re-engineering, analytics platforms, and executive dashboards for
+                  global energy and oil &amp; gas organizations.
                 </p>
 
                 <div className="flex flex-wrap gap-2 text-[0.8rem] text-slate-300">
                   <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-slate-700 bg-slate-900/80">
                     <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(34,197,94,0.9)]" />
-                    B.Tech CSE • 2022–2026
+                    8+ Years Experience
                   </div>
                   <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-slate-700 bg-slate-900/80">
-                    Python • JavaScript • SQL
+                    BPM • Data Analytics • AI
                   </div>
                   <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-slate-700 bg-slate-900/80">
-                    Web • ML • Cloud • Excel/VBA
+                    Oil &amp; Gas • Energy • Utilities
                   </div>
                 </div>
 
@@ -349,7 +351,7 @@ useEffect(() => {
                     View Projects <span className="text-base">↗</span>
                   </a>
                   <a
-                    href="mailto:rj05jharimjhim@gmail.com"
+                    href="mailto:jhakashish.16@gmail.com"
                     className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-[0.85rem] tracking-[0.16em] uppercase border border-slate-400/80 bg-slate-900/90 hover:bg-slate-600/40 transition"
                   >
                     Email Me <span className="text-base">✉</span>
@@ -358,13 +360,13 @@ useEffect(() => {
 
                 <div className="flex flex-wrap gap-2 text-[0.78rem] text-slate-400">
                   <span className="border border-dashed border-slate-500/80 rounded-full px-3 py-1">
-                    RDSO Internship
+                    BP Innovation Labs
                   </span>
                   <span className="border border-dashed border-slate-500/80 rounded-full px-3 py-1">
-                    IBM AI &amp; Cloud Certifications
+                    Digital Transformation
                   </span>
                   <span className="border border-dashed border-slate-500/80 rounded-full px-3 py-1">
-                    RAG &amp; LLM Projects
+                    Executive Dashboards
                   </span>
                 </div>
               </div>
@@ -377,41 +379,48 @@ useEffect(() => {
                     Profile
                   </span>
                 </div>
-                <div className="text-sm font-semibold mb-1">Rimjhim Jha</div>
+                <div className="text-sm font-semibold mb-1">Ashish Kumar Jha</div>
                 <div className="text-[0.8rem] text-slate-400 mb-3">
-                  B.Tech – Computer Science &amp; Engineering, Shri Ramswaroop
-                  Memorial College of Engineering &amp; Management
+                  Techno-Functional Consultant specializing in Energy, Utilities, and
+                  Oil &amp; Gas domains with deep expertise in BPM, Data Analytics,
+                  and Digital Transformation.
                 </div>
                 <div className="grid gap-2 text-[0.78rem] mb-3">
                   <div className="grid grid-cols-[auto,1fr] gap-x-3 gap-y-1 items-baseline">
                     <div className="text-[0.65rem] tracking-[0.18em] uppercase text-slate-500">
-                      Education
+                      MBA
                     </div>
                     <div>
-                      <strong>SRMCEM</strong> (2022–2026)
+                      <strong>PDEU, Gandhinagar</strong> – Energy &amp; Infrastructure
                     </div>
                   </div>
                   <div className="grid grid-cols-[auto,1fr] gap-x-3 gap-y-1 items-baseline">
                     <div className="text-[0.65rem] tracking-[0.18em] uppercase text-slate-500">
-                      School
+                      B.Tech
                     </div>
                     <div>
-                      <strong>RLB Memorial School</strong>
-                      <br />
-                      Class XII – 80% (2021–22) • Class X – 92% (2019–20)
+                      <strong>Integral University</strong> – Computer Science &amp; Engineering
+                    </div>
+                  </div>
+                  <div className="grid grid-cols-[auto,1fr] gap-x-3 gap-y-1 items-baseline">
+                    <div className="text-[0.65rem] tracking-[0.18em] uppercase text-slate-500">
+                      Location
+                    </div>
+                    <div>
+                      <strong>Gurugram, India</strong>
                     </div>
                   </div>
                 </div>
                 <div className="flex flex-wrap gap-1.5 text-[0.72rem] mb-3">
                   {[
-                    "Python",
-                    "JavaScript",
-                    "HTML & CSS",
-                    "SQL & PostgreSQL",
-                    "Tableau & Excel",
-                    "AWS & Cloud",
-                    "Postman",
-                    "GitHub",
+                    "ARIS (Expert)",
+                    "Power BI (Expert)",
+                    "JIRA (Expert)",
+                    "SQL & Python",
+                    "Tableau",
+                    "Azure DevOps",
+                    "BPMN 2.0",
+                    "Signavio",
                   ].map((skill) => (
                     <span
                       key={skill}
@@ -422,27 +431,26 @@ useEffect(() => {
                   ))}
                 </div>
                 <div className="flex items-center justify-between text-[0.78rem] text-slate-400">
-                  <span>Currently exploring RAG Chatbots &amp; ML-powered tools.</span>
+                  <span>Currently working on AI-driven data insights at BP.</span>
                   <div className="flex gap-1.5">
                     <a
-                      href="https://www.linkedin.com/in/rimjhim-jha-5114s8/"
+                      href="https://www.linkedin.com/in/ashish-kumar-jha/"
                       target="_blank"
                       className="w-7 h-7 flex items-center justify-center rounded-full border border-slate-500/80 bg-slate-900/90 text-xs hover:-translate-y-[2px] hover:border-slate-100/80 shadow-md transition"
                     >
                       in
                     </a>
                     <a
-                      href="https://rimjhimjhaa.github.io/portfolio/"
-                      target="_blank"
-                      className="w-7 h-7 flex items-center justify-center rounded-full border border-slate-500/80 bg-slate-900/90 text-xs hover:-translate-y-[2px] hover:border-slate-100/80 shadow-md transition"
-                    >
-                      ↗
-                    </a>
-                    <a
-                      href="mailto:rj05jharimjhim@gmail.com"
+                      href="mailto:jhakashish.16@gmail.com"
                       className="w-7 h-7 flex items-center justify-center rounded-full border border-slate-500/80 bg-slate-900/90 text-xs hover:-translate-y-[2px] hover:border-slate-100/80 shadow-md transition"
                     >
                       ✉
+                    </a>
+                    <a
+                      href="tel:+919919887811"
+                      className="w-7 h-7 flex items-center justify-center rounded-full border border-slate-500/80 bg-slate-900/90 text-xs hover:-translate-y-[2px] hover:border-slate-100/80 shadow-md transition"
+                    >
+                      📞
                     </a>
                   </div>
                 </div>
@@ -450,54 +458,101 @@ useEffect(() => {
             </div>
           </section>
 
-          {/* SKILLS */}
+          {/* ABOUT ME */}
+          <section id="about" className="py-10">
+            <div className="reveal rounded-[22px] border border-slate-600/80 bg-slate-950/90 shadow-2xl p-6">
+              <h2 className="text-sm sm:text-base tracking-[0.18em] uppercase mb-4">
+                About Me
+              </h2>
+              <p className="text-[0.9rem] text-slate-300 leading-relaxed mb-4">
+                I am a techno-functional consultant specializing in Energy, Utilities,
+                and Oil &amp; Gas domains, combining deep industry knowledge with strong
+                capabilities in process modeling, data analytics, automation, and
+                solution design.
+              </p>
+              <p className="text-[0.9rem] text-slate-300 leading-relaxed mb-4">
+                My experience spans consulting, solution architecture, agile delivery,
+                and data innovation initiatives. I have led cross-functional teams,
+                collaborated with senior stakeholders, and delivered measurable business
+                outcomes including reduced delivery delays, improved risk posture, and
+                real-time executive visibility.
+              </p>
+              <p className="text-[0.9rem] text-slate-300 leading-relaxed">
+                Currently, I work closely with data engineering and business leadership
+                teams to build integrated data models, analytics platforms, and AI-driven
+                insights that enable faster, smarter decision-making.
+              </p>
+            </div>
+          </section>
+
+          {/* SKILLS / EXPERTISE */}
           <section id="skills" className="py-10">
             <div className="flex flex-col md:flex-row md:items-baseline md:justify-between gap-3 mb-7 reveal">
               <h2 className="text-sm sm:text-base tracking-[0.18em] uppercase">
-                Skills
+                Core Expertise
               </h2>
               <p className="text-xs sm:text-sm text-slate-400 max-w-xs">
-                A mix of programming, data tools, and cloud technologies used across
-                web, ML, and automation projects.
+                A blend of business consulting, data analytics, and industry-specific
+                capabilities developed over 8+ years.
               </p>
             </div>
             <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
               {[
                 {
-                  title: "Programming Languages",
-                  items: ["Python", "JavaScript"],
-                },
-                {
-                  title: "Web Technologies",
+                  title: "Business & Consulting",
                   items: [
-                    "HTML",
-                    "CSS",
-                    "Streamlit (ML apps)",
-                    "OpenCV integration with Web UI",
+                    "Business Process Modeling (BPMN 2.0)",
+                    "Process Re-engineering & Digital Transformation",
+                    "Design Thinking–led Consulting",
+                    "Agile Scrum & Delivery Management",
+                    "Solution Design & Pre-Sales Support",
                   ],
                 },
                 {
-                  title: "Data & Databases",
-                  items: ["SQL", "PostgreSQL", "Tableau", "Excel (Advanced + VBA)"],
-                },
-                {
-                  title: "Cloud & Tools",
-                  items: ["AWS & IBM Cloud", "Postman", "Git & GitHub"],
-                },
-                {
-                  title: "AI / ML & RAG",
+                  title: "Data & Analytics",
                   items: [
-                    "LLMs & RAG (LangChain)",
-                    "Vector DB (FAISS)",
-                    "GROQ & Hugging Face",
+                    "Enterprise Data Modeling (PEM, MEM, MOM)",
+                    "Advanced Data Analysis (SQL, Python)",
+                    "Executive-level Metrics & KPI Frameworks",
+                    "Business Intelligence & Visualization",
+                    "Data Quality & Automation",
+                  ],
+                },
+                {
+                  title: "Industry Experience",
+                  items: [
+                    "Oil & Gas (Upstream, Midstream, Downstream)",
+                    "Energy & Utilities (Gas & Electricity)",
+                    "Chemicals & Natural Resources",
+                    "Risk, Compliance & Governance",
+                  ],
+                },
+                {
+                  title: "Tools & Technologies",
+                  items: [
+                    "ARIS (Expert)",
+                    "Signavio",
+                    "Microsoft Visio (Expert)",
+                    "Power BI (Expert)",
+                    "Tableau",
+                  ],
+                },
+                {
+                  title: "Project Management",
+                  items: [
+                    "Azure DevOps",
+                    "JIRA (Expert)",
+                    "Microsoft Office Suite",
+                    "Service Improvement & Automation Strategy",
                   ],
                 },
                 {
                   title: "Soft Skills",
                   items: [
-                    "Problem Solving",
-                    "Collaboration & Communication",
-                    "Quick Learning & Adaptability",
+                    "Stakeholder Management",
+                    "Cross-functional Team Leadership",
+                    "Client Communication & Demos",
+                    "Knowledge Management",
                   ],
                 },
               ].map((card) => (
@@ -525,193 +580,170 @@ useEffect(() => {
           <section id="projects" className="py-10">
             <div className="flex flex-col md:flex-row md:items-baseline md:justify-between gap-3 mb-7 reveal">
               <h2 className="text-sm sm:text-base tracking-[0.18em] uppercase">
-                Projects
+                Key Projects &amp; Engagements
               </h2>
               <p className="text-xs sm:text-sm text-slate-400 max-w-xs">
-                Selected work spanning web development, machine learning, RAG
-                chatbots, and Excel automation.
+                Selected work spanning data consulting, BPM transformation, and
+                enterprise solutions for global energy organizations.
               </p>
             </div>
 
             <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-              {/* Restaurant Reservation */}
-              <article
-                className="project-card reveal rounded-[22px] border border-slate-600/80 bg-slate-950/90 shadow-2xl p-4 cursor-pointer"
-                onClick={() => openLink("https://example.com")}
-              >
-                <div className="text-[0.7rem] tracking-[0.18em] uppercase text-yellow-300">
-                  Web + Microservices
-                </div>
-                <h3 className="mt-1 text-sm font-semibold">
-                  White Chili Restaurant Reservation
-                </h3>
-                <p className="mt-2 text-[0.82rem] text-slate-400">
-                  A restaurant reservation system designed for White Chili Restro with
-                  a clean web interface and microservice-based backend approach.
-                </p>
-                <p className="mt-2 text-[0.75rem] text-slate-100/90">
-                  Tech Stack – HTML, CSS, JavaScript, IBM Cloud, GitHub
-                </p>
-                <div className="mt-3 flex items-center justify-between text-[0.78rem] text-slate-400">
-                  <span className="px-2 py-1 rounded-full border border-slate-500/80 text-[0.7rem]">
-                    End-to-End Web App
-                  </span>
-                  <span className="inline-flex items-center gap-1">
-                    Live link (placeholder) <span>↗</span>
-                  </span>
-                </div>
-              </article>
-
-              {/* RAG Chatbot */}
+              {/* BP Innovation Labs */}
               <article className="project-card reveal rounded-[22px] border border-slate-600/80 bg-slate-950/90 shadow-2xl p-4">
                 <div className="text-[0.7rem] tracking-[0.18em] uppercase text-yellow-300">
-                  RAG Chatbot
+                  Data Consulting &amp; AI
                 </div>
-                <h3 className="mt-1 text-sm font-semibold">PDF Q&amp;A Bot</h3>
+                <h3 className="mt-1 text-sm font-semibold">
+                  BP Innovation Labs (DMDCT)
+                </h3>
                 <p className="mt-2 text-[0.82rem] text-slate-400">
-                  A Retrieval-Augmented Generation chatbot that answers questions
-                  from uploaded PDFs using LLMs, vector search, and a simple
-                  Streamlit UI.
+                  Acting as the primary business-facing and data analytics consultant
+                  for BP's Data &amp; Digital teams. Designing consolidated enterprise
+                  data models integrating multiple operational datasets.
                 </p>
                 <p className="mt-2 text-[0.75rem] text-slate-100/90">
-                  Tech Stack – LLM, LangChain, FAISS, GROQ, Hugging Face, Streamlit,
-                  Google Colab
+                  Tech Stack – SQL, Python, Power BI, Tableau, Data Modeling
                 </p>
                 <div className="mt-3 flex items-center justify-between text-[0.78rem] text-slate-400">
                   <span className="px-2 py-1 rounded-full border border-slate-500/80 text-[0.7rem]">
-                    RAG • NLP
+                    MethodHub • Current
                   </span>
                   <span className="inline-flex items-center gap-1">
-                    Git/Live link (private) <span>⏳</span>
+                    Enterprise Data &amp; AI <span>🔷</span>
                   </span>
                 </div>
               </article>
 
-              {/* Sign Language Translator */}
+              {/* National Gas - Strategic Infrastructure */}
               <article className="project-card reveal rounded-[22px] border border-slate-600/80 bg-slate-950/90 shadow-2xl p-4">
                 <div className="text-[0.7rem] tracking-[0.18em] uppercase text-yellow-300">
-                  Machine Learning
+                  Risk Compliance &amp; Implementation
                 </div>
                 <h3 className="mt-1 text-sm font-semibold">
-                  ASL Hand Sign Language Translator
+                  Strategic Infrastructure – National Gas
                 </h3>
                 <p className="mt-2 text-[0.82rem] text-slate-400">
-                  Real-time ASL hand sign detection for accessibility, combining
-                  image processing and ML models with a simple web interface.
+                  Led the Invoicing Scrum, managing a cross-functional team of 25+
+                  developers and testers. Reduced project delays by ~28% compared to
+                  parallel modules through improved planning and governance.
                 </p>
                 <p className="mt-2 text-[0.75rem] text-slate-100/90">
-                  Tech Stack – Python, OpenCV, HTML, CSS, GitHub, Google Colab
+                  Tech Stack – Power BI, JIRA, Azure DevOps, Solution Architecture
                 </p>
                 <div className="mt-3 flex items-center justify-between text-[0.78rem] text-slate-400">
                   <span className="px-2 py-1 rounded-full border border-slate-500/80 text-[0.7rem]">
-                    Computer Vision
+                    Wipro
                   </span>
                   <span className="inline-flex items-center gap-1">
-                    Demo access on request <span>👋</span>
+                    40% Reporting Effort Reduced <span>📊</span>
                   </span>
                 </div>
               </article>
 
-              {/* Excel Highlighter */}
-              <article
-                className="project-card reveal rounded-[22px] border border-slate-600/80 bg-slate-950/90 shadow-2xl p-4 cursor-pointer"
-                onClick={() =>
-                  openLink("https://github.com/Rimjhimjhaa/HIGHLIGHTER")
-                }
-              >
+              {/* Sustain Plus GEMINI */}
+              <article className="project-card reveal rounded-[22px] border border-slate-600/80 bg-slate-950/90 shadow-2xl p-4">
                 <div className="text-[0.7rem] tracking-[0.18em] uppercase text-yellow-300">
-                  Excel Automation
+                  Business Consulting
                 </div>
                 <h3 className="mt-1 text-sm font-semibold">
-                  Highlighter (Excel VBA Script)
+                  Sustain Plus GEMINI – National Gas
                 </h3>
                 <p className="mt-2 text-[0.82rem] text-slate-400">
-                  Excel automation script to highlight key values, helping quickly
-                  scan large data sheets and focus on critical information.
+                  Conducted solution workshops, client demos, and sign-off sessions
+                  ensuring 100% requirement compliance. Established knowledge management
+                  practices via SDDs and FRDs, accelerating team onboarding.
                 </p>
                 <p className="mt-2 text-[0.75rem] text-slate-100/90">
-                  Tech Stack – Excel, VBA Script
+                  Tech Stack – ARIS, Power BI, Documentation, Agile Scrum
                 </p>
                 <div className="mt-3 flex items-center justify-between text-[0.78rem] text-slate-400">
                   <span className="px-2 py-1 rounded-full border border-slate-500/80 text-[0.7rem]">
-                    GitHub
+                    Wipro
                   </span>
-                  <a
-                    href="https://github.com/Rimjhimjhaa/HIGHLIGHTER"
-                    target="_blank"
-                    className="inline-flex items-center gap-1"
-                  >
-                    View Code <span>↗</span>
-                  </a>
+                  <span className="inline-flex items-center gap-1">
+                    100% Compliance <span>✓</span>
+                  </span>
                 </div>
               </article>
 
-              {/* Loan EMI Calculator */}
-              <article
-                className="project-card reveal rounded-[22px] border border-slate-600/80 bg-slate-950/90 shadow-2xl p-4 cursor-pointer"
-                onClick={() =>
-                  openLink("https://github.com/Rimjhimjhaa/LOAN-EMI-CALCULATOR-")
-                }
-              >
+              {/* IOCL Refinery Process Modeling */}
+              <article className="project-card reveal rounded-[22px] border border-slate-600/80 bg-slate-950/90 shadow-2xl p-4">
                 <div className="text-[0.7rem] tracking-[0.18em] uppercase text-yellow-300">
-                  Excel Tool
+                  BPM &amp; Integration
                 </div>
                 <h3 className="mt-1 text-sm font-semibold">
-                  Loan EMI Calculator
+                  IOCL Refinery Process Modeling (RPMS)
                 </h3>
                 <p className="mt-2 text-[0.82rem] text-slate-400">
-                  An Excel-based EMI calculator that helps users estimate their EMI
-                  and visualize repayment plans with formulas and basic charts.
+                  Modeled refinery operations using LP modeling and spiral planning
+                  frameworks. Delivered detailed business operating models, process
+                  hierarchies, KPIs, and maturity assessments for upstream and
+                  downstream energy operations.
                 </p>
                 <p className="mt-2 text-[0.75rem] text-slate-100/90">
-                  Tech Stack – Excel
+                  Tech Stack – ARIS, LP Modeling, BPMN 2.0, Process Architecture
                 </p>
                 <div className="mt-3 flex items-center justify-between text-[0.78rem] text-slate-400">
                   <span className="px-2 py-1 rounded-full border border-slate-500/80 text-[0.7rem]">
-                    GitHub
+                    Accenture
                   </span>
-                  <a
-                    href="https://github.com/Rimjhimjhaa/LOAN-EMI-CALCULATOR-"
-                    target="_blank"
-                    className="inline-flex items-center gap-1"
-                  >
-                    View Code <span>↗</span>
-                  </a>
+                  <span className="inline-flex items-center gap-1">
+                    Refinery Operations <span>🏭</span>
+                  </span>
                 </div>
               </article>
 
-              {/* External Portfolio */}
-              <article
-                className="project-card reveal rounded-[22px] border border-slate-600/80 bg-slate-950/90 shadow-2xl p-4 cursor-pointer"
-                onClick={() =>
-                  openLink("https://rimjhimjhaa.github.io/portfolio/")
-                }
-              >
+              {/* Energy BPM CoE */}
+              <article className="project-card reveal rounded-[22px] border border-slate-600/80 bg-slate-950/90 shadow-2xl p-4">
                 <div className="text-[0.7rem] tracking-[0.18em] uppercase text-yellow-300">
-                  Web Portfolio
+                  Center of Excellence
                 </div>
                 <h3 className="mt-1 text-sm font-semibold">
-                  Previous Portfolio Website
+                  Energy BPM Center of Excellence
                 </h3>
                 <p className="mt-2 text-[0.82rem] text-slate-400">
-                  Earlier version of my personal portfolio showcasing projects and
-                  skills. This new portfolio builds on it with more interactivity
-                  and animations.
+                  Built BPM assets in ARIS and conducted leadership-level design
+                  thinking sessions. Designed proof-of-value concepts including smart
+                  monitoring systems and centralized control platforms for industrial
+                  operations.
                 </p>
                 <p className="mt-2 text-[0.75rem] text-slate-100/90">
-                  Tech Stack – HTML, CSS, JavaScript, GitHub Pages
+                  Tech Stack – ARIS, Design Thinking, Smart Monitoring, IoT Concepts
                 </p>
                 <div className="mt-3 flex items-center justify-between text-[0.78rem] text-slate-400">
                   <span className="px-2 py-1 rounded-full border border-slate-500/80 text-[0.7rem]">
-                    Live
+                    Accenture
                   </span>
-                  <a
-                    href="https://rimjhimjhaa.github.io/portfolio/"
-                    target="_blank"
-                    className="inline-flex items-center gap-1"
-                  >
-                    Visit Site <span>↗</span>
-                  </a>
+                  <span className="inline-flex items-center gap-1">
+                    Innovation &amp; POV <span>💡</span>
+                  </span>
+                </div>
+              </article>
+
+              {/* Chemicals & Natural Resources CoE */}
+              <article className="project-card reveal rounded-[22px] border border-slate-600/80 bg-slate-950/90 shadow-2xl p-4">
+                <div className="text-[0.7rem] tracking-[0.18em] uppercase text-yellow-300">
+                  Industry CoE
+                </div>
+                <h3 className="mt-1 text-sm font-semibold">
+                  Chemicals &amp; Natural Resources CoE
+                </h3>
+                <p className="mt-2 text-[0.82rem] text-slate-400">
+                  Contributed to industry-specific BPM frameworks and process
+                  optimization initiatives. Developed reusable assets and best
+                  practices for chemicals and natural resources sector clients.
+                </p>
+                <p className="mt-2 text-[0.75rem] text-slate-100/90">
+                  Tech Stack – ARIS, Process Optimization, Industry Frameworks
+                </p>
+                <div className="mt-3 flex items-center justify-between text-[0.78rem] text-slate-400">
+                  <span className="px-2 py-1 rounded-full border border-slate-500/80 text-[0.7rem]">
+                    Accenture
+                  </span>
+                  <span className="inline-flex items-center gap-1">
+                    Reusable Assets <span>📦</span>
+                  </span>
                 </div>
               </article>
             </div>
@@ -721,43 +753,82 @@ useEffect(() => {
           <section id="experience" className="py-10">
             <div className="flex flex-col md:flex-row md:items-baseline md:justify-between gap-3 mb-7 reveal">
               <h2 className="text-sm sm:text-base tracking-[0.18em] uppercase">
-                Experience
+                Professional Experience
               </h2>
               <p className="text-xs sm:text-sm text-slate-400 max-w-xs">
-                Practical exposure through internship experience and hands-on
-                project work.
+                8+ years of consulting experience across leading global organizations.
               </p>
             </div>
 
-            <div className="experience-card reveal rounded-[22px] border border-slate-600/80 bg-slate-950/90 shadow-2xl p-4 grid md:grid-cols-[1.1fr_minmax(0,1fr)] gap-5">
-              <div>
-                <div className="text-sm font-semibold mb-1">
-                  Research Design &amp; Standards Organisation (RDSO) – Internship
-                </div>
-                <div className="text-[0.82rem] text-slate-400 mb-3">
-                  RDSO • Internship • Certificate available
+            <div className="space-y-5">
+              {/* MethodHub */}
+              <div className="experience-card reveal rounded-[22px] border border-slate-600/80 bg-slate-950/90 shadow-2xl p-4">
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 mb-3">
+                  <div>
+                    <div className="text-sm font-semibold">MethodHub</div>
+                    <div className="text-[0.82rem] text-yellow-300">
+                      Business Analyst – Data Consulting &amp; AI Use-Cases
+                    </div>
+                  </div>
+                  <div className="text-[0.78rem] text-slate-400 px-3 py-1 rounded-full border border-slate-500/80">
+                    June 2025 – Present
+                  </div>
                 </div>
                 <div className="space-y-1.5 text-[0.82rem] text-slate-300">
-                  <div>▸ Gained exposure to real-world engineering workflows and standards.</div>
-                  <div>▸ Understood how structured data and automation can improve decision making.</div>
-                  <div>▸ Improved professional communication, documentation, and teamwork skills.</div>
+                  <div>▸ Acting as the primary business-facing and data analytics consultant for BP's Data &amp; Digital teams.</div>
+                  <div>▸ Designing consolidated enterprise data models integrating multiple operational datasets.</div>
+                  <div>▸ Performing complex data analysis using SQL and Python to generate actionable insights.</div>
+                  <div>▸ Collaborating with data engineers and senior stakeholders to automate data ingestion, validation, and analytics workflows.</div>
+                  <div>▸ Developing and maintaining executive dashboards using Power BI and Tableau, enabling real-time performance visibility.</div>
                 </div>
-                <a
-                  href="https://drive.google.com/file/d/1Fm_KbQLqiXMx_b-HIKxKsmqZEVKUp6yC/view?usp=sharing"
-                  target="_blank"
-                  className="inline-flex items-center gap-1 text-[0.8rem] text-sky-200 mt-3"
-                >
-                  View Internship Certificate <span>↗</span>
-                </a>
               </div>
-              <div>
-                <div className="text-sm font-semibold mb-1">
-                  What I’m focusing on now
+
+              {/* Wipro */}
+              <div className="experience-card reveal rounded-[22px] border border-slate-600/80 bg-slate-950/90 shadow-2xl p-4">
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 mb-3">
+                  <div>
+                    <div className="text-sm font-semibold">Wipro</div>
+                    <div className="text-[0.82rem] text-yellow-300">
+                      Business Consultant – Risk Compliance &amp; Implementation
+                    </div>
+                  </div>
+                  <div className="text-[0.78rem] text-slate-400 px-3 py-1 rounded-full border border-slate-500/80">
+                    March 2023 – June 2025
+                  </div>
+                </div>
+                <div className="text-[0.78rem] text-slate-400 mb-2">
+                  Projects: Strategic Infrastructure – National Gas | Sustain Plus GEMINI – National Gas
                 </div>
                 <div className="space-y-1.5 text-[0.82rem] text-slate-300">
-                  <div>▸ Building more RAG-based intelligent assistants and tools.</div>
-                  <div>▸ Strengthening DSA and backend skills for scalable systems.</div>
-                  <div>▸ Exploring cloud-native deployments and serverless patterns.</div>
+                  <div>▸ Led the Invoicing Scrum, managing a cross-functional team of 25+ developers and testers.</div>
+                  <div>▸ Reduced project delays by ~28% compared to parallel modules through improved planning and governance.</div>
+                  <div>▸ Conducted solution workshops, client demos, and sign-off sessions ensuring 100% requirement compliance.</div>
+                  <div>▸ Built real-time Power BI dashboards, reducing reporting effort by 40%.</div>
+                  <div>▸ Established knowledge management practices via SDDs and FRDs, accelerating team onboarding.</div>
+                </div>
+              </div>
+
+              {/* Accenture */}
+              <div className="experience-card reveal rounded-[22px] border border-slate-600/80 bg-slate-950/90 shadow-2xl p-4">
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 mb-3">
+                  <div>
+                    <div className="text-sm font-semibold">Accenture</div>
+                    <div className="text-[0.82rem] text-yellow-300">
+                      Business Consultant – BPM &amp; Integration Architecture
+                    </div>
+                  </div>
+                  <div className="text-[0.78rem] text-slate-400 px-3 py-1 rounded-full border border-slate-500/80">
+                    May 2017 – February 2023
+                  </div>
+                </div>
+                <div className="text-[0.78rem] text-slate-400 mb-2">
+                  Key Engagements: IOCL Refinery Process Modeling (RPMS) | Energy BPM CoE | Chemicals &amp; Natural Resources CoE
+                </div>
+                <div className="space-y-1.5 text-[0.82rem] text-slate-300">
+                  <div>▸ Modeled refinery operations using LP modeling and spiral planning frameworks.</div>
+                  <div>▸ Delivered detailed business operating models, process hierarchies, KPIs, and maturity assessments for upstream and downstream energy operations.</div>
+                  <div>▸ Built BPM assets in ARIS and conducted leadership-level design thinking sessions.</div>
+                  <div>▸ Designed proof-of-value concepts including smart monitoring systems and centralized control platforms for industrial operations.</div>
                 </div>
               </div>
             </div>
@@ -770,42 +841,27 @@ useEffect(() => {
                 Certifications
               </h2>
               <p className="text-xs sm:text-sm text-slate-400 max-w-xs">
-                Certified in AI, Cloud, and Web technologies with a strong focus on
-                hands-on learning.
+                Professional certifications validating expertise in business analysis,
+                technology, and risk management.
               </p>
             </div>
 
             <div className="cert-list reveal space-y-3">
               {[
                 [
-                  "Serverless Computing – IBM",
-                  "IBM",
-                  "https://drive.google.com/file/d/1-M5mZ-yShc8nnW8MD2dzGTLb5MNw41wV/view?usp=sharing",
+                  "BCS ISEB – Certified Business Analyst",
+                  "UK Professional Certification",
+                  null,
                 ],
                 [
-                  "AI – IBM",
-                  "IBM",
-                  "https://drive.google.com/file/d/1NNSkL8WD3Bfvm809Q-8GG8V0JoHLDnDt/view?usp=sharing",
+                  "Microsoft Certified ASP.NET 3.5 Professional",
+                  "Microsoft Corporation",
+                  null,
                 ],
                 [
-                  "Python (Data Science) – IBM",
-                  "IBM",
-                  "https://drive.google.com/file/d/1Z_O5SgW0-vEYn8AhYvyf-SwGo_vToV0H/view?usp=sharing",
-                ],
-                [
-                  "HTML & CSS – IBM",
-                  "IBM",
-                  "https://drive.google.com/file/d/1tM27uWgvPJ2cJDT5jmr8Am1Ftntkdyen/view?usp=sharing",
-                ],
-                [
-                  "Cloud Essentials – IBM",
-                  "IBM",
-                  "https://drive.google.com/file/d/1aYGsfnjGGMGWwi2EOOkZkVIOPyU3y0An/view?usp=sharing",
-                ],
-                [
-                  "AI (LLM + RAG)",
-                  "Specialization in LLM + Retrieval Augmented Generation",
-                  "https://drive.google.com/file/d/1F5_RK3vdzxxM8BTPXz1hFfVVqWwD-lOa/view?usp=sharing",
+                  "ISO 31000 Risk Management Expert",
+                  "International Standards Organization",
+                  null,
                 ],
               ].map(([name, org, url]) => (
                 <div
@@ -816,182 +872,217 @@ useEffect(() => {
                     <div className="text-[0.85rem] font-medium">{name}</div>
                     <div className="text-[0.78rem] text-slate-400">{org}</div>
                   </div>
-                  <a
-                    href={url}
-                    target="_blank"
-                    className="inline-flex items-center gap-1 text-[0.78rem] text-sky-200"
-                  >
-                    Open Certificate <span>↗</span>
-                  </a>
+                  {url && (
+                    <a
+                      href={url}
+                      target="_blank"
+                      className="inline-flex items-center gap-1 text-[0.78rem] text-sky-200"
+                    >
+                      Open Certificate <span>↗</span>
+                    </a>
+                  )}
                 </div>
               ))}
             </div>
           </section>
 
+          {/* EDUCATION */}
+          <section id="education" className="py-10">
+            <div className="flex flex-col md:flex-row md:items-baseline md:justify-between gap-3 mb-7 reveal">
+              <h2 className="text-sm sm:text-base tracking-[0.18em] uppercase">
+                Education
+              </h2>
+              <p className="text-xs sm:text-sm text-slate-400 max-w-xs">
+                Academic foundation in management and technology.
+              </p>
+            </div>
+
+            <div className="grid gap-5 md:grid-cols-2">
+              <div className="reveal rounded-[22px] border border-slate-600/80 bg-slate-950/90 shadow-2xl p-4">
+                <div className="text-[0.7rem] tracking-[0.18em] uppercase text-yellow-300 mb-1">
+                  MBA – Energy &amp; Infrastructure
+                </div>
+                <div className="text-sm font-semibold mb-1">
+                  School of Petroleum Management, PDEU
+                </div>
+                <div className="text-[0.82rem] text-slate-400 mb-2">
+                  Gandhinagar, Gujarat
+                </div>
+                <div className="text-[0.82rem] text-slate-300">
+                  Specialization: Marketing &amp; Operations
+                </div>
+              </div>
+
+              <div className="reveal rounded-[22px] border border-slate-600/80 bg-slate-950/90 shadow-2xl p-4">
+                <div className="text-[0.7rem] tracking-[0.18em] uppercase text-yellow-300 mb-1">
+                  B.Tech – Computer Science &amp; Engineering
+                </div>
+                <div className="text-sm font-semibold mb-1">
+                  Integral University
+                </div>
+                <div className="text-[0.82rem] text-slate-400">
+                  Lucknow, Uttar Pradesh
+                </div>
+              </div>
+            </div>
+          </section>
+
           {/* CONTACT */}
           <section id="contact" className="py-10">
-  <div className="flex flex-col md:flex-row md:items-baseline md:justify-between gap-3 mb-7 reveal">
-    <h2 className="text-sm sm:text-base tracking-[0.18em] uppercase">
-      Contact
-    </h2>
-    <p className="text-xs sm:text-sm text-slate-400 max-w-xs">
-      Let’s collaborate on ideas in Web, ML, RAG, Cloud, or data-driven
-      solutions.
-    </p>
-  </div>
+            <div className="flex flex-col md:flex-row md:items-baseline md:justify-between gap-3 mb-7 reveal">
+              <h2 className="text-sm sm:text-base tracking-[0.18em] uppercase">
+                Contact
+              </h2>
+              <p className="text-xs sm:text-sm text-slate-400 max-w-xs">
+                Let's connect to discuss consulting opportunities, data-driven
+                solutions, or digital transformation initiatives.
+              </p>
+            </div>
 
-  <div className="grid md:grid-cols-[1.1fr_minmax(0,1fr)] gap-5">
-    {/* LEFT CARD — UNCHANGED */}
-    <div className="contact-card reveal rounded-[22px] border border-slate-600/80 bg-slate-950/90 shadow-2xl p-4 space-y-2 text-[0.86rem]">
-      <div className="flex items-center gap-3">
-        <div className="text-[0.75rem] uppercase tracking-[0.18em] text-slate-400">
-          Email
-        </div>
-        <div>
-          <a
-            href="mailto:rj05jharimjhim@gmail.com"
-            className="border-b border-dashed border-slate-400/80"
-          >
-            rj05jharimjhim@gmail.com
-          </a>
-        </div>
-      </div>
+            <div className="grid md:grid-cols-[1.1fr_minmax(0,1fr)] gap-5">
+              {/* LEFT CARD */}
+              <div className="contact-card reveal rounded-[22px] border border-slate-600/80 bg-slate-950/90 shadow-2xl p-4 space-y-2 text-[0.86rem]">
+                <div className="flex items-center gap-3">
+                  <div className="text-[0.75rem] uppercase tracking-[0.18em] text-slate-400">
+                    Email
+                  </div>
+                  <div>
+                    <a
+                      href="mailto:jhakashish.16@gmail.com"
+                      className="border-b border-dashed border-slate-400/80"
+                    >
+                      jhakashish.16@gmail.com
+                    </a>
+                  </div>
+                </div>
 
-      <div className="flex items-center gap-3">
-        <div className="text-[0.75rem] uppercase tracking-[0.18em] text-slate-400">
-          Phone
-        </div>
-        <div>
-          <a
-            href="tel:+919555667526"
-            className="border-b border-dashed border-slate-400/80"
-          >
-            +91-9555667526
-          </a>
-        </div>
-      </div>
+                <div className="flex items-center gap-3">
+                  <div className="text-[0.75rem] uppercase tracking-[0.18em] text-slate-400">
+                    Phone
+                  </div>
+                  <div>
+                    <a
+                      href="tel:+919919887811"
+                      className="border-b border-dashed border-slate-400/80"
+                    >
+                      +91-991-988-7811
+                    </a>
+                  </div>
+                </div>
 
-      <div className="flex items-center gap-3">
-        <div className="text-[0.75rem] uppercase tracking-[0.18em] text-slate-400">
-          LinkedIn
-        </div>
-        <div>
-          <a
-            href="https://www.linkedin.com/in/rimjhim-jha-5114s8/"
-            target="_blank"
-            className="border-b border-dashed border-slate-400/80"
-          >
-            linkedin.com/in/rimjhim-jha-5114s8/
-          </a>
-        </div>
-      </div>
+                <div className="flex items-center gap-3">
+                  <div className="text-[0.75rem] uppercase tracking-[0.18em] text-slate-400">
+                    Location
+                  </div>
+                  <div>Gurugram, India</div>
+                </div>
 
-      <div className="flex items-center gap-3">
-        <div className="text-[0.75rem] uppercase tracking-[0.18em] text-slate-400">
-          GitHub
-        </div>
-        <div>
-          <a
-            href="https://rimjhimjhaa.github.io/portfolio/"
-            target="_blank"
-            className="border-b border-dashed border-slate-400/80"
-          >
-            Portfolio &amp; GitHub Projects
-          </a>
-        </div>
-      </div>
+                <div className="flex items-center gap-3">
+                  <div className="text-[0.75rem] uppercase tracking-[0.18em] text-slate-400">
+                    LinkedIn
+                  </div>
+                  <div>
+                    <a
+                      href="https://www.linkedin.com/in/ashish-kumar-jha/"
+                      target="_blank"
+                      className="border-b border-dashed border-slate-400/80"
+                    >
+                      linkedin.com/in/ashish-kumar-jha
+                    </a>
+                  </div>
+                </div>
 
-      <p className="text-[0.8rem] text-slate-400 mt-2">
-        Prefer a quick hello? Drop me an email or message on LinkedIn – I’m
-        always open to discussing internships, projects, and collaborations.
-      </p>
+                <p className="text-[0.8rem] text-slate-400 mt-2">
+                  I'm always open to discussing consulting engagements, data analytics
+                  projects, BPM initiatives, and digital transformation opportunities.
+                  Feel free to reach out via email or connect on LinkedIn.
+                </p>
 
-      <div className="inline-flex items-center gap-2 text-[0.8rem] text-slate-400 mt-2">
-        <span className="w-2.5 h-2.5 rounded-full bg-gradient-to-br from-yellow-300 to-orange-500 shadow-[0_0_12px_rgba(250,204,21,0.9)]" />
-        <span>
-          Tip: You can always revisit the lamp switch at the top to “power
-          up” this portfolio again.
-        </span>
-      </div>
-    </div>
+                <div className="inline-flex items-center gap-2 text-[0.8rem] text-slate-400 mt-2">
+                  <span className="w-2.5 h-2.5 rounded-full bg-gradient-to-br from-yellow-300 to-orange-500 shadow-[0_0_12px_rgba(250,204,21,0.9)]" />
+                  <span>
+                    Tip: You can always revisit the lamp switch at the top to "power
+                    up" this portfolio again.
+                  </span>
+                </div>
+              </div>
 
-    {/* RIGHT CARD — FORMSPREE CONNECTED */}
-    <form
-      action="https://formspree.io/f/mykylvgk"
-      method="POST"
-      className="contact-card reveal rounded-[22px] border border-slate-600/80 bg-slate-950/90 shadow-2xl p-4"
-    >
-      <div className="space-y-3 text-[0.85rem]">
-        <div className="space-y-1">
-          <label
-            htmlFor="nameInput"
-            className="text-[0.78rem] text-slate-400"
-          >
-            Your Name
-          </label>
-          <input
-            id="nameInput"
-            name="name"
-            type="text"
-            placeholder="Enter your name"
-            className="w-full rounded-full border border-slate-500/80 bg-slate-900/90 px-3 py-2 text-[0.85rem] outline-none focus:border-slate-100 focus:ring-1 focus:ring-slate-100 transition"
-          />
-        </div>
+              {/* RIGHT CARD — FORMSPREE CONNECTED */}
+              <form
+                action="https://formspree.io/f/xwvkzqzz"
+                method="POST"
+                className="contact-card reveal rounded-[22px] border border-slate-600/80 bg-slate-950/90 shadow-2xl p-4"
+              >
+                <div className="space-y-3 text-[0.85rem]">
+                  <div className="space-y-1">
+                    <label
+                      htmlFor="nameInput"
+                      className="text-[0.78rem] text-slate-400"
+                    >
+                      Your Name
+                    </label>
+                    <input
+                      id="nameInput"
+                      name="name"
+                      type="text"
+                      placeholder="Enter your name"
+                      className="w-full rounded-full border border-slate-500/80 bg-slate-900/90 px-3 py-2 text-[0.85rem] outline-none focus:border-slate-100 focus:ring-1 focus:ring-slate-100 transition"
+                    />
+                  </div>
 
-        <div className="space-y-1">
-          <label
-            htmlFor="emailInput"
-            className="text-[0.78rem] text-slate-400"
-          >
-            Your Email
-          </label>
-          <input
-            id="emailInput"
-            name="email"
-            type="email"
-            placeholder="Enter your email"
-            className="w-full rounded-full border border-slate-500/80 bg-slate-900/90 px-3 py-2 text-[0.85rem] outline-none focus:border-slate-100 focus:ring-1 focus:ring-slate-100 transition"
-          />
-        </div>
+                  <div className="space-y-1">
+                    <label
+                      htmlFor="emailInput"
+                      className="text-[0.78rem] text-slate-400"
+                    >
+                      Your Email
+                    </label>
+                    <input
+                      id="emailInput"
+                      name="email"
+                      type="email"
+                      placeholder="Enter your email"
+                      className="w-full rounded-full border border-slate-500/80 bg-slate-900/90 px-3 py-2 text-[0.85rem] outline-none focus:border-slate-100 focus:ring-1 focus:ring-slate-100 transition"
+                    />
+                  </div>
 
-        <div className="space-y-1">
-          <label
-            htmlFor="messageInput"
-            className="text-[0.78rem] text-slate-400"
-          >
-            Message
-          </label>
-          <textarea
-            id="messageInput"
-            name="message"
-            placeholder="Write a short message or collaboration idea..."
-            className="w-full rounded-2xl border border-slate-500/80 bg-slate-900/90 px-3 py-2 text-[0.85rem] outline-none min-h-[90px] resize-y focus:border-slate-100 focus:ring-1 focus:ring-slate-100 transition"
-          />
-        </div>
+                  <div className="space-y-1">
+                    <label
+                      htmlFor="messageInput"
+                      className="text-[0.78rem] text-slate-400"
+                    >
+                      Message
+                    </label>
+                    <textarea
+                      id="messageInput"
+                      name="message"
+                      placeholder="Write a short message or collaboration idea..."
+                      className="w-full rounded-2xl border border-slate-500/80 bg-slate-900/90 px-3 py-2 text-[0.85rem] outline-none min-h-[90px] resize-y focus:border-slate-100 focus:ring-1 focus:ring-slate-100 transition"
+                    />
+                  </div>
 
-        <div className="flex flex-col gap-1">
-          <button
-            type="submit"
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-[0.85rem] tracking-[0.16em] uppercase bg-[linear-gradient(135deg,#f97316,#eab308,#22c55e)] text-slate-900 shadow-[0_16px_40px_rgba(251,191,36,0.6)] hover:scale-[1.02] hover:-translate-y-[1px] active:scale-[0.98] active:translate-y-[1px] transition self-start"
-          >
-            Send Message <span className="text-base">➤</span>
-          </button>
+                  <div className="flex flex-col gap-1">
+                    <button
+                      type="submit"
+                      className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-[0.85rem] tracking-[0.16em] uppercase bg-[linear-gradient(135deg,#f97316,#eab308,#22c55e)] text-slate-900 shadow-[0_16px_40px_rgba(251,191,36,0.6)] hover:scale-[1.02] hover:-translate-y-[1px] active:scale-[0.98] active:translate-y-[1px] transition self-start"
+                    >
+                      Send Message <span className="text-base">➤</span>
+                    </button>
 
-          <div className="text-[0.75rem] text-slate-400">
-            Your message will be sent directly to my inbox.
-          </div>
-        </div>
-      </div>
-    </form>
-  </div>
-</section>
-</main>
-
+                    <div className="text-[0.75rem] text-slate-400">
+                      Your message will be sent directly to my inbox.
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </section>
+        </main>
 
         {/* FOOTER */}
         <footer className="max-w-5xl mx-auto px-4 pb-8 pt-4 flex flex-col md:flex-row items-start md:items-center justify-between gap-3 border-t border-indigo-900/80 text-[0.76rem] text-slate-400">
           <div>
-            © <span>{year}</span> Rimjhim Jha. Crafted with Next.js, Tailwind CSS &amp; React.
+            © <span>{year}</span> Ashish Kumar Jha. Crafted with Next.js, Tailwind CSS &amp; React.
           </div>
           <div className="flex flex-wrap gap-3">
             <a
