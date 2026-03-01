@@ -540,7 +540,7 @@ useEffect(() => {
                 onClick={() => openLink("https://tech-with-rim.vercel.app/")}
               >
                 <div className="text-[0.7rem] tracking-[0.18em] uppercase text-yellow-300">
-                  Web + Microservices
+                  Web Development
                 </div>
                 <h3 className="mt-1 text-sm font-semibold">
                   3D  Portfolio with Interactive Projects
