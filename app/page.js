@@ -557,7 +557,7 @@ useEffect(() => {
                     End-to-End Web App
                   </span>
                   <span className="inline-flex items-center gap-1">
-                    Live link (placeholder) <span>↗</span>
+                     onClick={() => openLink("https://rimjhimjhaa.github.io/restrobot/")}
                   </span>
                 </div>
               </article>
@@ -581,9 +581,10 @@ useEffect(() => {
                   <span className="px-2 py-1 rounded-full border border-slate-500/80 text-[0.7rem]">
                     RAG • NLP
                   </span>
-                  <span className="inline-flex items-center gap-1">
-                    Git/Live link (private) <span>⏳</span>
+                  <span className="inline-flex items-center gap-1 cursor-pointer" onClick={() => openLink("https://pdf-chatbot-jap2c2teykcq3lphwljgud.streamlit.app/")}>
+                    View Demo <span>↗</span>
                   </span>
+                
                 </div>
               </article>
 
@@ -606,8 +607,8 @@ useEffect(() => {
                   <span className="px-2 py-1 rounded-full border border-slate-500/80 text-[0.7rem]">
                     Computer Vision
                   </span>
-                  <span className="inline-flex items-center gap-1">
-                    Demo access on request <span>👋</span>
+                  <span className="inline-flex items-center gap-1 cursor-pointer" onClick={() => openLink("https://signdetection.netlify.app/")}>
+                    View Demo <span>↗</span>
                   </span>
                 </div>
               </article>
