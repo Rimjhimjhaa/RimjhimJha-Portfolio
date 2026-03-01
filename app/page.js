@@ -613,6 +613,59 @@ useEffect(() => {
                 </div>
               </article>
 
+              {/* Image Forgery Analysis */}
+<article
+  className="project-card reveal rounded-[22px] border border-slate-600/80 bg-slate-950/90 shadow-2xl p-4 cursor-pointer"
+ 
+>
+  <div className="text-[0.7rem] tracking-[0.18em] uppercase text-yellow-300">
+    Image Forgery Detection
+  </div>
+
+  <h3 className="mt-1 text-sm font-semibold">
+    Image Tampering Detection
+  </h3>
+
+  <p className="mt-2 text-[0.82rem] text-slate-400">
+    Image tampering detection using Python and OpenCV to identify
+    inconsistencies in digital images.
+  </p>
+
+  <p className="mt-2 text-[0.75rem] text-slate-100/90">
+    Tech Stack – Python, OpenCV, NumPy, Streamlit
+  </p>
+
+  <div className="mt-3 flex items-center justify-between text-[0.78rem] text-slate-400">
+    <div className="flex gap-2">
+      <a
+        href="https://github.com/Rimjhimjhaa/image-tampering-detection"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="px-2 py-1 rounded-full border border-slate-500/80 text-[0.7rem] hover:border-white transition"
+      >
+        GitHub
+      </a>
+
+      <a
+        href="https://drive.google.com/file/d/1UiDCS6JOyQZj71gy3IvSD-3lsgHTf18F/view?usp=sharing"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="px-2 py-1 rounded-full border border-yellow-400/80 text-yellow-300 text-[0.7rem] hover:bg-yellow-400/10 transition"
+      >
+        Video Demo
+      </a>
+    </div>
+
+    <a
+      href="https://github.com/Rimjhimjhaa/image-tampering-detection"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center gap-1 hover:text-white transition"
+    >
+      View Code <span>↗</span>
+    </a>
+  </div>
+</article>
               {/* Excel Highlighter */}
               <article
                 className="project-card reveal rounded-[22px] border border-slate-600/80 bg-slate-950/90 shadow-2xl p-4 cursor-pointer"
@@ -646,6 +699,7 @@ useEffect(() => {
                   </a>
                 </div>
               </article>
+
 
               {/* Loan EMI Calculator */}
               <article
