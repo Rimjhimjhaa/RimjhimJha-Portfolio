@@ -534,6 +534,32 @@ useEffect(() => {
             </div>
 
             <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+              {/* 3D Portfolio */}
+              <article
+                className="project-card reveal rounded-[22px] border border-slate-600/80 bg-slate-950/90 shadow-2xl p-4 cursor-pointer"
+                onClick={() => openLink("https://tech-with-rim.vercel.app/")}
+              >
+                <div className="text-[0.7rem] tracking-[0.18em] uppercase text-yellow-300">
+                  Web + Microservices
+                </div>
+                <h3 className="mt-1 text-sm font-semibold">
+                  3D  Portfolio with Interactive Projects
+                </h3>
+                <p className="mt-2 text-[0.82rem] text-slate-400">
+                  A visually engaging 3D portfolio showcasing my projects and skills, built with Three.js and React for a dynamic user experience.
+                </p>
+                <p className="mt-2 text-[0.75rem] text-slate-100/90">
+                  Tech Stack – HTML, CSS, JavaScript, GitHub, Three.js, React, Vercel
+                </p>
+                <div className="mt-3 flex items-center justify-between text-[0.78rem] text-slate-400">
+                  <span className="px-2 py-1 rounded-full border border-slate-500/80 text-[0.7rem]">
+                     Website
+                  </span>
+                   <span className="inline-flex items-center gap-1 cursor-pointer" onClick={() => openLink("https://tech-with-rim.vercel.app/")}>
+                    Open <span>↗</span>
+                  </span>
+                </div>
+              </article>
               {/* Restaurant Reservation */}
               <article
                 className="project-card reveal rounded-[22px] border border-slate-600/80 bg-slate-950/90 shadow-2xl p-4 cursor-pointer"
