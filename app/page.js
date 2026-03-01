@@ -537,7 +537,7 @@ useEffect(() => {
               {/* Restaurant Reservation */}
               <article
                 className="project-card reveal rounded-[22px] border border-slate-600/80 bg-slate-950/90 shadow-2xl p-4 cursor-pointer"
-                onClick={() => openLink("https://example.com")}
+                onClick={() => openLink("https://rimjhimjhaa.github.io/restrobot/")}
               >
                 <div className="text-[0.7rem] tracking-[0.18em] uppercase text-yellow-300">
                   Web + Microservices
@@ -556,8 +556,8 @@ useEffect(() => {
                   <span className="px-2 py-1 rounded-full border border-slate-500/80 text-[0.7rem]">
                     End-to-End Web App
                   </span>
-                  <span className="inline-flex items-center gap-1">
-                     onClick={() => openLink("https://rimjhimjhaa.github.io/restrobot/")}
+                   <span className="inline-flex items-center gap-1 cursor-pointer" onClick={() => openLink("https://rimjhimjhaa.github.io/restrobot/")}>
+                    View Demo <span>↗</span>
                   </span>
                 </div>
               </article>
